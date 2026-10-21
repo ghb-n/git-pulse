@@ -4,16 +4,10 @@
 #include <unordered_map>
 
 namespace fs = std::filesystem;
-
-using namespace GitPulse::Scanner;
-struct GitPulse::Scanner::FileInfo {
-  string FileName;
-  string FilePath;
-  uintmax_t FileSize;
-};
+namespace GitPulse {
 
 std::unordered_map<std::string, FileInfo>
-GitPulse::Scanner::scanfiles(const fs::path &path) {
+Scanner::scanfiles(const fs::path &path) {
   std::unordered_map<std::string, FileInfo> file_map;
 
   if (!fs::exists(path) || !fs::is_directory(path)) {
@@ -38,4 +32,5 @@ GitPulse::Scanner::scanfiles(const fs::path &path) {
     }
   }
   return file_map;
-} // namespace GitPulse::Scanner
+} // namespace GitPulse
+} // namespace GitPulse

@@ -22,8 +22,8 @@ int main(int argc, char *argv[]) {
   // Loop through the unordered_map using modern C++ structured bindings
   for (const auto &[file_name, info] : file_map) {
     std::cout << "📄 Name: " << file_name << '\n'
-              << "   Path: " << info.full_path << '\n'
-              << "   Size: " << info.size_bytes << " bytes\n"
+              << "   Path: " << info.FilePath << '\n'
+              << "   Size: " << info.FileSize << " bytes\n"
               << "--------------------------------------------------\n";
   }
 

@@ -8,11 +8,17 @@
 
 using namespace std;
 namespace GitPulse {
-namespace Scanner {
-struct FileInfo;
-std::unordered_map<std::string, FileInfo>
-scanfiles(const std::filesystem::path &path);
-} // namespace Scanner
+struct FileInfo {
+  string FileName;
+  string FilePath;
+  uintmax_t FileSize;
+};
+
+class Scanner {
+public:
+  static std::unordered_map<std::string, FileInfo>
+  scanfiles(const std::filesystem::path &path);
+};
 } // namespace GitPulse
 
 #endif
