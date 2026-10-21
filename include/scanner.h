@@ -9,9 +9,8 @@
 using namespace std;
 namespace GitPulse {
 struct FileInfo {
-  string FileName;
-  string FilePath;
-  uintmax_t FileSize;
+  string RepoName;
+  string RepoPath;
 };
 
 class Scanner {

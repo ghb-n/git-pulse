@@ -1,2 +1,4 @@
 build/*
-
+assets/logo.svg
+assets/icon.png
+.editorconfig

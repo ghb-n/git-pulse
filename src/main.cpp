@@ -20,10 +20,9 @@ int main(int argc, char *argv[]) {
   std::cout << "--------------------------------------------------\n";
 
   // Loop through the unordered_map using modern C++ structured bindings
-  for (const auto &[file_name, info] : file_map) {
-    std::cout << "📄 Name: " << file_name << '\n'
-              << "   Path: " << info.FilePath << '\n'
-              << "   Size: " << info.FileSize << " bytes\n"
+  for (const auto &[repo_name, info] : file_map) {
+    std::cout << "📄 Name: " << repo_name << '\n'
+              << "   Path: " << info.RepoPath << '\n'
               << "--------------------------------------------------\n";
   }
 
